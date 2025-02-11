@@ -1,41 +1,43 @@
 // Complete the js code
-// function Car(make, model) {
-	
+function Car(make, model) {
+	this.make=make;
+	this.model=model;
+}
+
+function SportsCar(make, model, topSpeed) {
+	Car.call(this, make, model);
+	this.topSpeed=topSpeed;
+}
+
+// // create class car-> add properties to it and its methods
+
+// class Car {
+// 	constructor(make, model) {
+// 		this.make=make;
+// 		this.model=model;
+// 	}
 // }
 
-// function SportsCar(make, model, topSpeed) {
-	
+// Car.prototype.getMakeModel = function () {
+// 	return `${this.make} ${this.model}`
 // }
 
-// create class car-> add properties to it and its methods
-
-class Car {
-	constructor(make, model) {
-		this.make=make;
-		this.model=model;
-	}
-}
-
-Car.prototype.getMakeModel = function () {
-	return `${this.make} ${this.model}`
-}
-
-let obj={
-	make:2000,
+// let obj={
+// 	make:2000,
 	
-}
-// create class sportsCar-> inherit car->create properties and its methods
+// }
+// // create class sportsCar-> inherit car->create properties and its methods
 
-class SportsCar {
-	constructor(make, model, topSpeed) {
-		super(make, model);
-		this.topSpeed=model;
-	}
-}
+// class SportsCar {
+// 	constructor(make, model, topSpeed) {
+// 		super(make, model);
+// 		this.topSpeed=model;
+// 	}
+// }
 
-SportsCarCar.prototype.getTopSpeed = function () {
-	return this.topSpeed;
-}
+// SportsCarCar.prototype.getTopSpeed = function () {
+// 	return this.topSpeed;
+// }
 
 // Do not change the code below
 window.Car = Car;
